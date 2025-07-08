@@ -1,0 +1,143 @@
+
+:root {
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+
+    --body-font: "Montserrat";
+    --heading-font: "Fraunces";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(--body-font);
+    background-color: var(--cream);
+}
+
+.product-layout {
+    max-width: 42.85rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    margin: 1.5rem;
+    border-radius: 1rem;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.product-content {
+    padding: 2.28rem;
+}
+
+.product-brand {
+    font-size: .85rem;
+    color: var(--grey);
+    font-family: var(--body-font);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+}
+
+.product-title {
+    font-family: var(--heading-font);
+    color: var(--black);
+    font-size: 2.28rem;
+    margin: 1.71rem 0;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.product-price-review {
+    display: flex; 
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1.71rem 0;
+}
+
+.product-price {
+    font-size: 2.28rem;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    color: var(--green-500);
+}
+
+.product-previous-price {
+    font-family: var(--body-font);
+    font-size: .92rem;
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+.product-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart-btn {
+    /* max-width: 20.42rem; */
+    width: 100%;
+    font-size: 1rem;
+    padding: 1.14rem 2.26rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background-color: var(--green-500);
+    color: var(--white);
+    border-radius: .5rem;
+    font-family: var(--body-font);
+}
+
+@media (min-width: 45rem) {
+    .product-layout {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .image-container,
+    .product-content {
+        width: 50%;
+        height: 100%;
+    }
+
+    .image-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem 0 0 1rem;
+        display: block;
+    }
+
+    .product-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.28rem;
+    }
+}
